@@ -257,9 +257,9 @@ function printQuote(){
   <div class="tot"><div class="total-line"><span>Imponibile</span><strong>${eur(t.sub)}</strong></div><div class="total-line"><span>IVA ${q.vat}%</span><strong>${eur(t.iva)}</strong></div><div class="total-line grand"><span>Totale</span><strong>${eur(t.total)}</strong></div></div>
   ${q.notes?`<div class="notes"><strong>Note e condizioni</strong><br>${esc(q.notes).replaceAll('\\n','<br>')}</div>`:''}
   <div class="foot">Miano Costruzioni — P.I. 02631260748 — Tel. +39 349 1014521 — mianocostruzioni@gmail.com</div>
-  <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}</script>
 </body></html>`); w.document.close();w.focus();setTimeout(()=>w.print(),350);
 }
+if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}
 el('vat').addEventListener('input',calc); newQuote();
 </script>
 </body></html>
